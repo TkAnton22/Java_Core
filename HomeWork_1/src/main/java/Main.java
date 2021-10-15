@@ -1,14 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        Team team = new Team();
+        Course course = new Course(10, 1, 2, 1, 1.7);
 
-        Member[] members;
+        Member[] fourPlayers = new Member[4];
 
-        Member member1 = new Member("Vasya", "Spartak", 17, 12, 2, 1.7);
-        Member member2 = new Member("Vasya", "Spartak", 18, 11, 2, 1.9);
-        Member member3 = new Member("Petya", "Spartak", 19, 13, 2, 1.8);
-        Member member4 = new Member("Dima", "Spartak", 20, 12, 2, 1.6);
+        fourPlayers[0] = new Member("Вася",12, 2, 1.7, false);
+        fourPlayers[1] = new Member("Петя",11, 2, 1.9, false);
+        fourPlayers[2] = new Member("Миша",13, 1, 1.8, false);
+        fourPlayers[3] = new Member("Дима",12, 2, 1.6, false);
 
-    member1.info();
+        Team red_whiteTeam = new Team("Red-White", fourPlayers);
+
+        //fourPlayers[1].singleMemberInfo();
+        red_whiteTeam.courseComplete();
+        //red_whiteTeam.getAllMembers();
     }
 }

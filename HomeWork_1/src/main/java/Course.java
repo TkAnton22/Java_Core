@@ -12,6 +12,11 @@ public class Course {
         this.swimTime = swimTime;
         this.altitudeJump = altitudeJump;
     }
-    Course course = new Course(10, 55, 2, 60, 1.7);
-
+    boolean goCourse(int runSpeed, int swimSpeed, double jumpAlt, boolean isFinished) {
+        if (distanceRun / runTime <= runSpeed && distanceSwim / swimTime <= swimSpeed && altitudeJump <= jumpAlt) {
+            return isFinished;
+        } else {
+            return !isFinished;
+        }
+    }
 }

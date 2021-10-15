@@ -1,21 +1,19 @@
 public class Member {
     String name;
-    String teamName;
-    int age;
     int runSpeed;
     int swimSpeed;
     double jumpAlt;
+    boolean isFinished;
 
-    public Member(String name, String teamName, int age, int runSpeed, int swimSpeed, double jumpAlt){
+    public Member(String name, int runSpeed, int swimSpeed, double jumpAlt, boolean isFinished){
         this.name = name;
-        this.teamName = teamName;
-        this.age = age;
         this.runSpeed = runSpeed;
         this.swimSpeed = swimSpeed;
         this.jumpAlt = jumpAlt;
+        this.isFinished = isFinished;
     }
-    public void info() {
-        System.out.println(name + " " + teamName + " " + age + " " + runSpeed + " " + swimSpeed + " " + jumpAlt);
+    public void singleMemberInfo() {
+        System.out.println("Данные одного участника:\nИмя: " + name + " Скорость бега: " + runSpeed + "км/ч Скорость плавания: " + swimSpeed + "км/ч Высота прыжка: " + jumpAlt + "м\n");
     }
 
 }
