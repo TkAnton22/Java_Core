@@ -12,11 +12,12 @@ public class Course {
         this.swimTime = swimTime;
         this.altitudeJump = altitudeJump;
     }
-    boolean goCourse(int runSpeed, int swimSpeed, double jumpAlt, boolean isFinished) {
-        if (distanceRun / runTime <= runSpeed && distanceSwim / swimTime <= swimSpeed && altitudeJump <= jumpAlt) {
-            return isFinished;
-        } else {
-            return !isFinished;
+    public void doIt(Team t) {
+        for (Member member : t.members) {
+            goCourse(member);
         }
+    }
+    public void goCourse(Member m) {
+        m.isFinished = this.distanceRun / this.runTime <= m.getRunSpeed() && this.distanceSwim / this.swimTime <= m.getSwimSpeed() && this.altitudeJump <= m.getJumpAlt();
     }
 }

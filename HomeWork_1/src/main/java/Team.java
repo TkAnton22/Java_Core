@@ -6,19 +6,18 @@ public class Team {
         name = nameTeam;
         members = membersTeam;
     }
-
     public void courseComplete() {
+        System.out.println("Список прошедших полосу: \n");
         for (Member member : members) {
             if (member.isFinished) {
-                System.out.println(member.name + " успешно прошел полосу!");
+                System.out.println(member.getName() + " успешно прошел полосу!");
             }
         }
     }
-
     public void getAllMembers() {
-        System.out.println("Данные всех учестников команды:");
+        System.out.println("Данные всех учестников команды:\n");
         for (Member member : members) {
-            System.out.println("Имя: " + member.name + " Скорость бега: " + member.runSpeed + "км/ч Скорость плавания: " + member.swimSpeed + "км/ч Высота прыжка: " + member.jumpAlt + "м");
+            System.out.println("Имя: " + member.getName() + " Скорость бега: " + member.getRunSpeed() + "км/ч Скорость плавания: " + member.getSwimSpeed() + "км/ч Высота прыжка: " + member.getJumpAlt() + "м");
         }
     }
 }
