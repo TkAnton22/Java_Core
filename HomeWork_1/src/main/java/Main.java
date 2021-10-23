@@ -10,9 +10,8 @@ public class Main {
         fourPlayers[3] = new Member("Дима",12, 2, 1.6, false);
 
         Team red_whiteTeam = new Team("Red-White", fourPlayers);
-
-        //fourPlayers[1].singleMemberInfo();
+        red_whiteTeam.getAllMembers();
+        course.doIt(red_whiteTeam);
         red_whiteTeam.courseComplete();
-        //red_whiteTeam.getAllMembers();
     }
 }
